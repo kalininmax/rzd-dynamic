@@ -20,7 +20,7 @@ export const config = {
 	output: {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, paths.build.scripts),
-		publicPath: '/assets/js',
+		publicPath: '/assets/js/',
 	},
 	module: {
 		rules: [
