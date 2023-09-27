@@ -1,0 +1,45 @@
+{% set futureNumbers = [
+	{
+		val: '<span class="num-lg">4</span>',
+		text: 'центра обработки данных и&nbsp;16&nbsp;дорожных вычислительных центров в&nbsp;ИТ&nbsp;РЖД'
+	},
+	{
+		val: '<span class="num-lg">240&nbsp;000+</span>',
+		text: 'автоматизированных рабочих мест в&nbsp;РЖД'
+	},
+	{
+		val: '<span class="num-lg">>30&nbsp;000</span>',
+		text: 'человек занято в&nbsp;ИТ-комплексе РЖД'
+	},
+	{
+		val: '<span class="num-lg">>7&nbsp;000</span><span class="h-28">&nbsp;км</span>',
+		text: 'протяженность квантовых сетей, создаваемых РЖД, к&nbsp;2024 году'
+	},
+	{
+		val: '<span class="num-lg">74,7</span><span class="h-28">&nbsp;%</span>',
+		text: 'уровень цифровой грамотности работника РЖД (на&nbsp;10% выше среднего по&nbsp;стране)'
+	}
+] %}
+
+<section class="future bg-blue-10">
+	<div class="future__container container grid">
+		<h2 class="future__title h2 c-blue">Будущее в&nbsp;цифре</h2>
+
+		<div class="future__text text-md">
+			<p>По&nbsp;<a class="underline" href="https://rzddigital.ru/upload/iblock/bdc/t5v6fcbyuap4xtgj7o35i39y8lo46f10.pdf" target="_blank" rel="noopener noreferrer">прогнозу</a> аналитиков РЖД, в&nbsp;основе глобальной экономики к&nbsp;2035 году будет лежать конкуренция цифровых экосистем, ядром каждой станет многопрофильный холдинг. Компания готова к&nbsp;этому сценарию: она создала мощную цифровую инфраструктуру и&nbsp;развивает современные технологии, в&nbsp;том числе сверхзащищенные <a class="underline" href="https://t.me/telerzd/3391" target="_blank" rel="noopener noreferrer">квантовые</a> коммуникационные сети. </p><p>На&nbsp;основе своей ИТ-инфраструктуры РЖД продолжает цифровизацию, <a class="underline" href="https://company.rzd.ru/ru/9401/page/78314?id=200092" target="_blank" rel="noopener noreferrer">для компании это</a> стратегический приоритет на&nbsp;многие годы вперед. Новые цифровые возможности обеспечат пассажирам РЖД максимальный комфорт, а&nbsp;бизнес-клиентам&nbsp;&mdash; максимальную скорость, надежность и&nbsp;прозрачность грузоперевозок.</p>
+		</div>
+
+		<dl class="future__numbers">
+		{% for number in futureNumbers %}
+			<div>
+				<dt class="future__num-val c-red">{{ number.val }}</dt>
+				<dd class="future__num-text t-16">{{ number.text }}</dd>
+			</div>
+		{% endfor %}
+		</dl>
+
+		<div class="future__picture" data-lottie="/assets/jsons/ch-4.json">
+			<img src="/assets/images/future.svg" width="1200" height="718" alt="">
+		</div>
+	</div>
+</section>

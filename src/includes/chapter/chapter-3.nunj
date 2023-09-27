@@ -1,0 +1,44 @@
+{% from "../../components/header/header.nunj" import header %}
+{% from "../../components/feature/feature.nunj" import feature %}
+
+<article class="chapter">
+	{{ header({
+		title: 'Цифровизация в&nbsp;грузовых перевозках',
+		desc: 'Цифровые сервисы РЖД облегчают работу для бизнес-клиентов',
+		img: '/assets/images/chapter-3/header.svg',
+		imgAttr: 'data-lottie="/assets/jsons/ch-3.json"'
+	}) }}
+
+	{{ feature({
+		title: '&laquo;РЖД-Груз&raquo;',
+		text: '<p>Раньше для отправки груза клиенту нужно было привозить в&nbsp;РЖД документы и&nbsp;подолгу общаться с&nbsp;менеджером для уточнения деталей договора. Сейчас почти все операции выполняются через &laquo;Личный кабинет клиента&raquo; или мобильное приложение &laquo;РЖД-Груз&raquo;. Онлайн можно направить план погрузки, рассчитать маршрут и&nbsp;стоимость перевозки, загрузить электронные копии документов. Также можно отследить перемещение вагона со&nbsp;своим грузом и&nbsp;просмотреть все операции с&nbsp;ним: погрузку, выгрузку и&nbsp;прочие.</p>',
+		img: '/assets/images/chapter-3/img-1.svg',
+		numbers: [
+			{
+				val: '<a href="https://rzddigital.ru/upload/iblock/bdc/t5v6fcbyuap4xtgj7o35i39y8lo46f10.pdf" target="_blank" rel="noopener noreferrer"><span class="num">88%</span></a>',
+				text: 'грузоотправителей в&nbsp;прошлом году взаимодействовали с&nbsp;РЖД онлайн'
+			},
+			{
+				val: '<span class="num">28&nbsp;000</span>',
+				text: 'организаций используют &laquo;Личный кабинет клиента&raquo;'
+			},
+			{
+				val: '<span class="num">100</span>',
+				text: 'договоров заключается ежедневно благодаря системе электронного документооборота'
+			}
+		]
+	}) }}
+
+	{{ feature({
+		className: '_reverse',
+		title: '&laquo;РЖД Маркет&raquo;',
+		text: '<p>В&nbsp;2021 году был запущен маркетплейс для бизнеса &laquo;РЖД Маркет&raquo;. Поставщики со&nbsp;всей России выставляют на&nbsp;нем свою продукцию, а&nbsp;покупатели выбирают товар с&nbsp;учетом оптимальных сроков и&nbsp;стоимости доставки по&nbsp;железной дороге. </p><p>Маркетплейс позволяет найти ближайшего поставщика, проверить его рейтинг, уточнить стоимость товара с&nbsp;доставкой и&nbsp;оформить заказ онлайн&nbsp;&mdash; одним счетом за&nbsp;покупку и&nbsp;доставку. Покупатель может отслеживать движение заказа в&nbsp;личном кабинете, а&nbsp;компания &laquo;РЖД&raquo; гарантирует сохранность груза и&nbsp;своевременность доставки.</p>',
+		img: '/assets/images/chapter-3/img-2.svg',
+		numbers: [
+			{
+				val: '<span class="num">>1 700</span>',
+				text: 'компаний зарегистрировались на&nbsp;маркетплейсе &laquo;РЖД Маркет&raquo; с&nbsp;2021 года'
+			}
+		]
+	}) }}
+</article>

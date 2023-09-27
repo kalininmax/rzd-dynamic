@@ -1,0 +1,13 @@
+{% extends "../templates/base.nunj" %}
+
+{% block content %}
+
+	{% include '../includes/hero/hero.nunj' %}
+	{% include '../includes/history/history.nunj' %}
+	{% include '../includes/chapter/chapter-1.nunj' %}
+	{% include '../includes/chapter/chapter-2.nunj' %}
+	{% include '../includes/chapter/chapter-3.nunj' %}
+	{% include '../includes/future/future.nunj' %}
+	{% include '../includes/footer/footer.nunj' %}
+
+{% endblock %}

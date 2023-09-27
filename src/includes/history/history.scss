@@ -1,0 +1,97 @@
+.history {
+	--container-padding: #{rem(16)};
+	position: relative;
+	padding-block: rem(291);
+	overflow: hidden;
+	@media (max-width: $desktop-sm) {
+		@include smoothValue('padding-block', 141px, 291px, $laptop);
+	}
+	@media (max-width: $laptop) {
+		@include smoothValue('padding-block', 40px, 141px, $mobile, $laptop);
+	}
+	@media (max-width: $mobile-only) {
+		--container-padding: #{rem(22)};
+		padding-bottom: rem(20);
+	}
+	&__container {
+		position: relative;
+		z-index: 2;
+		align-items: end;
+		@media (max-width: $mobile-only) {
+			display: flex;
+			flex-direction: column;
+			row-gap: rem(39);
+			align-items: stretch;
+		}
+	}
+	&__train-wrapper {
+		position: absolute;
+		z-index: 0;
+		right: 53.4%;
+		bottom: rem(122);
+		@media (max-width: $laptop) {
+			right: 44.5%;
+			bottom: rem(42);
+		}
+		@media (max-width: $mobile-only) {
+			position: static;
+			margin-top: rem(48);
+			margin-inline-start: rem(-1613);
+		}
+	}
+	&__train {
+		width: rem(1908);
+		height: auto;
+	}
+	&__logo {
+		width: rem(215);
+		height: rem(92);
+		margin-bottom: rem(90);
+		transform: translateX(-4%);
+		@media (max-width: $laptop) {
+			margin-bottom: rem(30);
+		}
+		@media (max-width: $mobile-only) {
+			margin-bottom: 0;
+		}
+	}
+	&__text {
+		grid-column: span 7;
+		p + p {
+			margin-top: 1.3em;
+		}
+		@media (max-width: $laptop) {
+			grid-column: span 8;
+			p + p {
+				margin-top: 1.4em;
+			}
+		}
+		@media (max-width: $mobile-only) {
+			p + p {
+				margin-top: 1em;
+			}
+		}
+	}
+	&__numbers {
+		grid-column: span 4 / -1;
+		display: grid;
+		row-gap: rem(38);
+		height: min-content;
+		@media (max-width: $mobile-only) {
+			row-gap: rem(20);
+		}
+	}
+	&__num-val {
+		margin-bottom: rem(14);
+		@media (max-width: $mobile-only) {
+			margin-bottom: rem(2);
+		}
+	}
+	&__num-text {
+		max-width: rem(300);
+		line-height: 1.25;
+		@media (max-width: $laptop) {
+			max-width: rem(300);
+		}
+	}
+}

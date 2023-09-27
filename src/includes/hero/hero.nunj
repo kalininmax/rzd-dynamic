@@ -1,0 +1,27 @@
+{% from "../../components/icon/icon.nunj" import icon %}
+
+<section class="hero" data-hero>
+	<div class="hero__container container grid">
+		<div class="hero__content" data-animation-group>
+			{{ icon({
+				iconName: 'rzd-logo',
+				className: 'hero__logo _rzd',
+				attr: 'width="80" height="49"'
+			}) }}
+
+			<h1 class="hero__title h1 c-blue" data-animation="fadeIn">Цифровое<br> преображение</h1>
+
+			{{ icon({
+				iconName: 'logo',
+				className: 'hero__logo _xx',
+				attr: 'width="479" height="205" role="img" aria-label="2003–2023 — 20 лет РЖД" data-animation="fadeIn"'
+			}) }}
+		</div>
+	</div>
+
+	<div class="hero__bg">
+		{% include "../../assets/images/hero-pattern.svg" %}
+		{% include "../../assets/images/hero-pattern-tablet.svg" %}
+		<img class="hero__train" src="/assets/images/sapsan-top.svg" width="100" height="1733" alt="" data-hero-train>
+	</div>
+</section>

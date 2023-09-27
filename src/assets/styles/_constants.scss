@@ -1,0 +1,66 @@
+$default-transition-duration: 0.3s;
+$fast-transition-duration: 0.15s;
+$default-transition-function: ease-out;
+
+// ======= BREAKPOINTS =======
+$desktop-4k: 3840px;
+$desktop: 1920px;
+$desktop-sm: 1440px;
+$laptop-md: 1280px;
+$laptop: 1024px;
+$laptop-sm: 992px;
+$tablet: 768px;
+$mobile-only: 767px;
+$mobile-lg: 640px;
+$mobile-md: 425px;
+$mobile: 375px;
+$mobile-sm: 374px;
+
+// ======= COLORS =======
+$white-0: #fff;
+$black-0: #000;
+
+$black: #262830;
+$red: #e21a1a;
+$blue: #394a58;
+$blue-100: #374a58;
+$blue-90: #4b5c69;
+$blue-80: #5f6e79;
+$blue-70: #73808a;
+$blue-60: #87929b;
+$blue-50: #9ba4ab;
+$blue-40: #afb7bc;
+$blue-30: #c3c9cd;
+$blue-20: #d7dbde;
+$blue-10: #ebedee;
+
+:root {
+	// ======= FONTS =======
+	--ff-fsrailway: 'FSRailway', 'Arial', sans-serif;
+
+	// ======= COLORS =======
+	--white-0: #{$white-0};
+	--black-0: #{$black-0};
+
+	--black: #{$black};
+	--red: #{$red};
+	--blue: #{$blue};
+	--blue-100: #{$blue-100};
+	--blue-90: #{$blue-90};
+	--blue-80: #{$blue-80};
+	--blue-70: #{$blue-70};
+	--blue-60: #{$blue-60};
+	--blue-50: #{$blue-50};
+	--blue-40: #{$blue-40};
+	--blue-30: #{$blue-30};
+	--blue-20: #{$blue-20};
+	--blue-10: #{$blue-10};
+
+	// ======= DEFAULTS =======
+	--default-font-family: var(--ff-fsrailway);
+	--default-font-size: 1.125rem; // 18px
+	--default-line-height: 1.4;
+	--default-font-weight: 400;
+	--default-text-color: var(--black);
+	--default-bg-color: var(--white-0);
+}

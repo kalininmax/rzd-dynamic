@@ -1,0 +1,124 @@
+.hero {
+	position: sticky;
+	z-index: -1;
+	top: 0;
+	display: grid;
+	min-height: 100svh;
+	overflow: hidden;
+	padding-bottom: 75vh;
+	@media (max-width: $mobile-only) {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-bottom: 0;
+	}
+	&__container {
+		position: relative;
+		z-index: 2;
+	}
+	&__content {
+		grid-column: span 6 / -1;
+		display: grid;
+		grid-template-rows: 1fr auto 1fr;
+		@media (max-width: $mobile-only) {
+			grid-column: 1/-1;
+			display: block;
+		}
+	}
+	&__title {
+		grid-row: 2/3;
+		margin-top: vh(-24, 1024);
+		@media (max-width: $laptop) {
+			margin-top: vh(-12, 720);
+			margin-left: -0.1em;
+		}
+	}
+	&__logo {
+		&._rzd {
+			position: absolute;
+			top: 0;
+			right: rem(20);
+			width: rem(80);
+			height: rem(49);
+			margin-top: rem(140);
+		}
+		&._xx {
+			grid-row: 3/4;
+			width: clamp(rem(266), vw(479, 1440), rem(479));
+			height: auto;
+			transform: translateX(-4%);
+			margin-top: rem(32);
+		}
+		@media (max-width: $laptop) {
+			&._rzd {
+				right: rem(68);
+				margin-top: rem(60);
+			}
+			&._xx {
+				margin-top: rem(25);
+				transform: translateX(-5%);
+			}
+		}
+		@media (max-width: $mobile-only) {
+			&._rzd {
+				position: static;
+				margin-top: rem(64);
+				margin-bottom: rem(92);
+			}
+			&._xx {
+				width: clamp(rem(266), vw(479, 1440), rem(479));
+				height: auto;
+				transform: translateX(-5%);
+				margin-top: rem(12);
+			}
+		}
+	}
+	&__bg {
+		position: absolute;
+		z-index: 0;
+		top: calc(calc(100vh - (max(rem(2861), vh(2861, 1024)))) + max(rem(89), vh(89, 1024)));
+		left: 0;
+		width: calc(840 / 1440 * 100%);
+		height: max(rem(2861), vh(2861, 1024));
+		svg:not([class]) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		[data-hero-bg-tablet] {
+			display: none;
+		}
+		@media (max-width: $laptop) {
+			width: calc(757 / 1024 * 100%);
+			height: max(rem(3045), vh(3045, 1024));
+			[data-hero-bg] {
+				display: none;
+			}
+			[data-hero-bg-tablet] {
+				display: block;
+			}
+		}
+		@media (max-width: $mobile-only) {
+			position: static;
+			width: 100%;
+			height: 0;
+			padding-bottom: calc(230 / 375 * 100%);
+			background: url('/assets/images/hero-bg-mobile.svg') 0 0 no-repeat;
+			svg:not([class]) {
+				display: none;
+			}
+		}
+	}
+	&__train {
+		width: rem(100);
+		height: rem(1733);
+		@media (max-width: $mobile-only) {
+			display: none;
+		}
+	}
+	[data-hero-train] {
+		visibility: hidden;
+	}
+}

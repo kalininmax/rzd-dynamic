@@ -1,0 +1,18 @@
+{% from "../../components/icon/icon.nunj" import icon %}
+
+<footer class="footer">
+	<div class="footer__container container">
+		{{ icon({
+			iconName: 'logo',
+			className: 'footer__logo',
+			attr: 'width="285" height="122" role="img" aria-label="2003–2023 — 20 лет РЖД"'
+		}) }}
+	</div>
+
+	<div class="footer__bg">
+		{% include "../../assets/images/footer-pattern.svg" %}
+	</div>
+	<div class="footer__bg _mobile">
+		{% include "../../assets/images/footer-pattern-mobile.svg" %}
+	</div>
+</footer>

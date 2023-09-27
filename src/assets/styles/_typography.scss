@@ -1,0 +1,131 @@
+.h-112 {
+	font-size: rem(112);
+	line-height: 1;
+	font-weight: 400;
+}
+
+.h-84 {
+	font-size: rem(84);
+	line-height: 1;
+	font-weight: 400;
+}
+
+.h-56 {
+	font-size: rem(56);
+	line-height: 1;
+	font-weight: 400;
+}
+
+.h-42 {
+	font-size: rem(42);
+	line-height: 1;
+	font-weight: 400;
+}
+
+.h-36 {
+	font-size: rem(36);
+	line-height: 1;
+	font-weight: 400;
+}
+
+.h-28 {
+	font-size: rem(28);
+	line-height: 1;
+	font-weight: 400;
+}
+
+.t-20 {
+	font-size: rem(20);
+	line-height: 1.38;
+	font-weight: 400;
+}
+
+.t-18 {
+	font-size: rem(18);
+	line-height: 1.4;
+	font-weight: 400;
+}
+
+.t-16 {
+	font-size: rem(16);
+	line-height: 1.4;
+	font-weight: 400;
+}
+
+.t-14 {
+	font-size: rem(14);
+	line-height: 1.4;
+	font-weight: 400;
+}
+
+.t-10 {
+	font-size: rem(10);
+	line-height: 1.4;
+	font-weight: 400;
+}
+
+.t-7 {
+	font-size: rem(7);
+	line-height: 1.4;
+	font-weight: 400;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.h1 {
+	@extend .h-84;
+	@media (max-width: $desktop-sm) {
+		@include smoothValue('font-size', 56px, 84px, $laptop);
+	}
+	@media (max-width: $laptop) {
+		@include smoothValue('font-size', 42px, 56px, $mobile, $laptop);
+	}
+	@media (max-width: $mobile-sm) {
+		font-size: rem(42);
+	}
+}
+
+.h2 {
+	@extend .h-42;
+	@media (max-width: $laptop) {
+		word-spacing: -0.01em;
+	}
+	@media (max-width: $mobile-lg) {
+		font-size: rem(28);
+	}
+}
+
+.num {
+	@extend .h-42;
+	@media (max-width: $laptop) {
+		font-size: rem(36);
+	}
+}
+
+.num-lg {
+	@extend .h-56;
+	@media (max-width: $mobile-lg) {
+		font-size: rem(42);
+	}
+}
+
+.text-lg {
+	@extend .h-28;
+	@media (max-width: $laptop) {
+		word-spacing: -0.01em;
+	}
+	@media (max-width: $mobile-lg) {
+		font-size: rem(20);
+		line-height: 1.4;
+		font-weight: 400;
+	}
+}
+
+.text-md {
+	@extend .t-20;
+	@media (max-width: $mobile-lg) {
+		font-size: rem(18);
+	}
+}

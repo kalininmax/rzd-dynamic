@@ -1,0 +1,31 @@
+{% macro feature(props) %}
+
+<section class="feature{% if props.className %} {{ props.className }}{% endif %}" data-feature>
+	<div class="feature__container container grid">
+		<div class="feature__text c-blue" data-feature-text>
+			<h3 class="feature__title h-28">{{ props.title }}</h3>
+
+			{{ props.text }}
+		</div>
+
+	{% if props.numbers %}
+		<dl class="feature__numbers" data-feature-numbers>
+		{% for number in props.numbers %}
+			<div>
+				<dt class="feature__num-val c-red">{{ number.val }}</dt>
+				<dd class="feature__num-text t-14 c-blue-60">{{ number.text }}</dd>
+			</div>
+		{% endfor %}
+		</dl>
+	{% else %}
+		<div class="feature__numbers _empty"></div>
+	{% endif %}
+		<div class="feature__picture" data-feature-img{% if props.lottie %} data-lottie="{{ props.lottie }}"{% endif %}>
+			{% if not props.lottie %}
+				<img src="{{ props.img }}" width="372" height="440" alt="">
+			{% endif %}
+		</div>
+	</div>
+</section>
+
+{% endmacro %}

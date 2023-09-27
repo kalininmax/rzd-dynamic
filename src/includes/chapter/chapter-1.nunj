@@ -1,0 +1,114 @@
+{% from "../../components/header/header.nunj" import header %}
+{% from "../../components/feature/feature.nunj" import feature %}
+
+<article class="chapter">
+	{{ header({
+		title: 'Цифровые решения для&nbsp;пассажиров',
+		desc: 'Цифровые технологии делают поездки на&nbsp;железнодорожном транспорте комфортнее для пассажиров',
+		img: '/assets/images/chapter-1/header.svg',
+		imgAttr: 'data-lottie="/assets/jsons/ch-1.json"'
+	}) }}
+
+	{{ feature({
+		title: 'РЖД Пассажирам',
+		text: '<p>Раньше билеты на&nbsp;поезд покупали на&nbsp;вокзале, отстояв очередь в&nbsp;кассу. Сейчас в&nbsp;мобильном приложении или на&nbsp;сайте rzd.ru есть расписание по&nbsp;любой станции в&nbsp;России, от&nbsp;Калининграда до&nbsp;Сахалина. Купить билет можно онлайн, а&nbsp;при посадке показать только документы. На&nbsp;пригородных маршрутах становится нормой оплата картами и&nbsp;по&nbsp;СБП, а&nbsp;билеты на&nbsp;электрички в&nbsp;Москве легко активируются по&nbsp;NFC.</p>',
+		img: '/assets/images/chapter-1/img-1.svg',
+		lottie: '/assets/jsons/ch-1-1.json',
+		numbers: [
+			{
+				val: '<span class="num">76%</span>',
+				text: 'билетов оформляется в&nbsp;электронном виде'
+			},
+			{
+				val: '<span class="num">1/3</span>',
+				text: 'билетов на&nbsp;поезда дальнего следования покупают в&nbsp;приложении'
+			},
+			{
+				val: '<span class="num">270</span>',
+				text: 'пригородных касс оформляют билеты на&nbsp;все виды транспорта'
+			}
+		]
+	}) }}
+
+	{{ feature({
+		className: '_reverse',
+		title: 'Конструктор путешествий',
+		text: '<p>В&nbsp;России более 85,6&nbsp;тыс.&nbsp;км&nbsp;железных дорог, и&nbsp;все&nbsp;же они есть не&nbsp;везде. Иногда, чтобы добраться до&nbsp;места назначения, поезд нужно сочетать с&nbsp;другими видами транспорта. Спланировать такую поездку и&nbsp;купить билеты бывает непросто. Поэтому в&nbsp;РЖД разработали &laquo;Конструктор путешествий&raquo;, где можно одним заказом оформить составной маршрут на&nbsp;поезд и&nbsp;другой вид транспорта, будь&nbsp;то автобус, самолет или даже водное судно (&laquo;Метеор&raquo;, &laquo;Восход&raquo;).</p><p>Кроме того, в&nbsp;пригородных кассах РЖД появилось специальное&nbsp;ПО, позволяющее купить билеты и&nbsp;на&nbsp;авиа-, водные и&nbsp;автобусные перевозки по&nbsp;всей России.</p>',
+		img: '/assets/images/chapter-1/img-2.svg',
+		lottie: '/assets/jsons/ch-1-2.json',
+		numbers: [
+			{
+				val: '<span class="num">12&nbsp;000</span>',
+				text: 'составных маршрутов пассажиры оформили с&nbsp;начала 2023 года'
+			},
+			{
+				val: '<span class="num">82%</span>',
+				text: 'составных маршрутов&nbsp;&mdash; уникальные, неповторяющиеся заказы'
+			},
+			{
+				val: '<span class="t-16">Грозный&nbsp;&mdash; Новый&nbsp;Уренгой</span>',
+				text: 'cамый популярный составной маршрут &laquo;поезд + самолет&raquo;'
+			}
+		]
+	}) }}
+
+	{{ feature({
+		title: 'Виртуальный помощник',
+		text: '<p>Робот отвечает на&nbsp;вопросы клиентов РЖД по&nbsp;телефону и&nbsp;в&nbsp;чатах. Не&nbsp;дожидаясь свободных операторов, у&nbsp;него можно узнать расписание, наличие и&nbsp;стоимость билетов, спросить о&nbsp;правилах поездки, возврате билетов и&nbsp;прочем&nbsp;&mdash; робот разбирается <a class="underline" href="https://gudok.ru/content/science_education/1611833/" target="_blank" rel="noopener noreferrer">в&nbsp;более чем 100 темах</a> и&nbsp;изучает новые. Он&nbsp;понимает разговорный язык, а&nbsp;при голосовом общении умеет находить и&nbsp;озвучивать текстовую информацию из&nbsp;систем РЖД. Виртуальный помощник берет на&nbsp;себя рутинные вопросы, чтобы сотрудники центра поддержки клиентов могли быстрее помочь клиентам в&nbsp;сложных случаях.</p>',
+		img: '/assets/images/chapter-1/img-3.svg',
+		lottie: '/assets/jsons/ch-1-3.json',
+		numbers: [
+			{
+				val: '<span class="num">77%</span>',
+				text: 'обращений робот успешно обрабатывает без участия оператора'
+			},
+			{
+				val: '<span class="num">50&ndash;70%</span>',
+				text: 'рабочего времени сотрудников освобождается от&nbsp;типовых вопросов'
+			},
+			{
+				val: '<span class="num">80%</span>',
+				text: '<a class="underline" href="https://gudok.ru/content/science_education/1611833/" target="_blank" rel="noopener noreferrer">обращений</a> в&nbsp;будущем должен закрывать робот без участия оператора'
+			}
+		]
+	}) }}
+
+	<div class="container">
+		<img src="/assets/images/chapter-1/inside-station.svg" width="100%" height="auto" alt="">
+	</div>
+
+	{{ feature({
+		className: '_reverse',
+		title: 'Безбарьерная среда',
+		text: '<p>Цифровые инструменты помогают пассажирам с&nbsp;ограниченными возможностями здоровья на&nbsp;всех этапах оформления поездки. Если текст на&nbsp;сайте трудно прочитать, его можно прослушать. В&nbsp;приложении доступна жестовая видеоконсультация, а&nbsp;оператор поможет заполнить заявку в&nbsp;режиме совместного использования экрана. Заявки пассажиров на&nbsp;сопровождение в&nbsp;пути и&nbsp;на&nbsp;бронь спецмест в&nbsp;поезде оформляются онлайн. А&nbsp;интеграция систем РЖД с&nbsp;государственными упрощает приобретение льготных билетов: бумажные справки для этого больше не&nbsp;нужны.</p>',
+		img: '/assets/images/chapter-1/img-4.svg',
+		lottie: '/assets/jsons/ch-1-4.json',
+		numbers: [
+			{
+				val: '<span class="num">266&nbsp;000</span>',
+				text: 'льготных билетов куплено через приложение &laquo;РЖД Пассажирам&raquo; в&nbsp;прошлом году'
+			}
+		]
+	}) }}
+
+	{{ feature({
+		title: 'Wi-Fi на вокзалах',
+		text: '<p>На&nbsp;330 вокзалах и&nbsp;пересадочных узлах пассажирам РЖД доступен бесплатный Wi-Fi. Также компания развивает бесшовный Wi-Fi, он&nbsp;уже действует на&nbsp;<a href="" class="underline" href="https://t.me/telerzd/464" target="_blank" rel="noopener noreferrer">МЦД</a> и&nbsp;на&nbsp;поездах &laquo;<a class="underline" href="https://company.rzd.ru/ru/9401/page/78314?id=206920" target="_blank" rel="noopener noreferrer">Сапсан</a>&raquo;. Когда пассажир идет от&nbsp;касс к&nbsp;поезду или едет в&nbsp;вагоне мимо вокзала, оборудование подключает его с&nbsp;одной точки доступа к&nbsp;другой, обеспечивая непрерывный сигнал. Например, можно войти в&nbsp;сеть Wi-Fi в&nbsp;зале ожидания в&nbsp;Москве, сесть в&nbsp;&laquo;Сапсан&raquo;, работать или развлекаться всю дорогу и&nbsp;закончить на&nbsp;вокзале в&nbsp;Санкт-Петербурге без дополнительных авторизаций.</p>',
+		img: '/assets/images/chapter-1/img-5.svg',
+		lottie: '/assets/jsons/ch-1-5.json',
+		numbers: [
+			{
+				val: '<span class="num">330</span>',
+				text: 'вокзалов и&nbsp;станций с&nbsp;Wi-Fi'
+			},
+			{
+				val: '<span class="num">3,2</span><span class="t-18">&nbsp;млн</span>',
+				text: 'пассажиров воспользовались Wi-Fi за&nbsp;первое полугодие 2023 года'
+			},
+			{
+				val: '<span class="num tilda">~</span><span class="num">1</span><span class="t-16">&nbsp;петабайт</span>',
+				text: '(1,1 млн&nbsp;Гб) данных пассажиры загрузили по&nbsp;Wi-Fi за&nbsp;это время'
+			}
+		]
+	}) }}
+</article>

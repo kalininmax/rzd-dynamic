@@ -1,0 +1,16 @@
+{% macro header(props) %}
+
+<header class="header bg-blue-10{% if props.className %} {{ props.className }}{% endif %}">
+	<div class="header__container container grid c-blue">
+		<div class="header__content">
+			<h2 class="header__title h2">{{ props.title }}</h2>
+			<p class="text-lg">{{ props.desc }}</p>
+		</div>
+
+		<div class="header__picture"{% if props.imgAttr %} {{ props.imgAttr }}{% endif %}>
+			{# <img src="{{ props.img }}" width="1200" height="718" alt=""> #}
+		</div>
+	</div>
+</header>
+
+{% endmacro %}

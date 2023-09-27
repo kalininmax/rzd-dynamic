@@ -1,0 +1,47 @@
+ {% from "../../components/icon/icon.nunj" import icon %}
+
+{% set historyNumbers = [
+	{
+		val: '<span class="num-lg">23</span><span class="h-28">&nbsp;млрд человек</span>',
+		text: 'перевезла компания &laquo;РЖД&raquo; за&nbsp;20&nbsp;лет'
+	},
+	{
+		val: '<span class="num-lg">5,8</span><span class="h-28">&nbsp;%</span>',
+		text: 'вклад железнодорожной отрасли в&nbsp;ВВП России'
+	},
+	{
+		val: '<span class="num-lg">3,95/5</span>',
+		text: 'уровень цифровой зрелости РЖД +43% с&nbsp;<a class="underline" href="https://company.rzd.ru/ru/9401/page/78314?id=199773" target="_blank" rel="noopener noreferrer">2019</a> года'
+	}
+] %}
+
+<section class="page__history history bg-blue-10">
+	<div class="history__container container grid">
+		<div class="history__text text-md">
+			{{ icon({
+				iconName: 'logo',
+				className: 'history__logo',
+				attr: 'width="215" height="92"'
+			}) }}
+			<p>За&nbsp;20&nbsp;лет своей истории РЖД вошли в&nbsp;мировой топ-3 железнодорожных компаний. Это главная транспортная компания России, на&nbsp;которую <a class="underline" href="https://rosstat.gov.ru/storage/mediabank/Gruzooborot_07-2023.xlsx" target="_blank" rel="noopener noreferrer">приходится</a> 47,2% грузовых и&nbsp;25% пассажирских перевозок в&nbsp;стране. Модернизация железных дорог стимулирует открытие предприятий, рост выпуска продукции и&nbsp;создание рабочих мест&nbsp;&mdash; так РЖД помогают развитию экономики.</p>
+			<p>Благодаря цифровизации компания ускоряет перевозки, упрощает их&nbsp;оформление, повышает безопасность и&nbsp;становится эффективнее.</p>
+		</div>
+
+		<dl class="history__numbers" data-animation-group>
+		{% for number in historyNumbers %}
+			<div data-animation="fadeIn">
+				<dt class="history__num-val c-red">{{ number.val }}</dt>
+				<dd class="history__num-text t-16">{{ number.text }}</dd>
+			</div>
+		{% endfor %}
+		</dl>
+	</div>
+
+	<div class="history__train-wrapper">
+		{{ icon({
+			iconName: 'sapsan-train',
+			className: 'history__train',
+			attr: 'width="1908" height="54"'
+		}) }}
+	</div>
+</section>

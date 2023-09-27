@@ -1,0 +1,30 @@
+{% from "./_head-scripts.nunj" import headScripts %}
+
+<!DOCTYPE html>
+<html class="page _loading" lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<title>{% block title %}РЖД 20 лет{% endblock %}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="preload" href="/assets/fonts/FSRailway-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/assets/fonts/FSRailway-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+		{{ headScripts() }}
+
+		{% block stylesheets %}
+			<link rel="stylesheet" href="/assets/css/styles.css?hash" />
+		{% endblock stylesheets %}
+	</head>
+	<body class="page__body">
+
+		<div class="page__wrapper wrapper">
+			{% block content %}
+			{% endblock content %}
+		</div>
+
+		{% block scripts %}
+			<script src="/assets/js/bundle.js?hash"></script>
+		{% endblock scripts %}
+	</body>
+</html>
